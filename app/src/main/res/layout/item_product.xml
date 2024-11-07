@@ -67,7 +67,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:paddingTop="16dp"
-        android:visibility=""> <!-- Oculta la vista expandida inicialmente -->
+        android:visibility="gone"> <!-- Oculta la vista expandida inicialmente -->
 
         <!-- Detalle Completo del Producto -->
         <TextView
