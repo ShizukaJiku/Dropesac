@@ -3,7 +3,10 @@
     <style name="Base.Theme.Dropesac" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-    </style>
+    </style>W
 
     <style name="Theme.Dropesac" parent="Base.Theme.Dropesac" />
+    <style name="ShapeAppearanceOverlay.App.CornerSize15Percent" parent="">
+        <item name="cornerSize">15%</item>
+    </style>
 </resources>
