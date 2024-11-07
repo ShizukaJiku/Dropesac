@@ -1,13 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/pattern_overlay"
-    android:orientation="vertical"
     android:padding="16dp"
-    android:gravity="center_horizontal"
-    >
+    android:gravity="center_horizontal">
 
     <!-- Logo Container with Background -->
     <FrameLayout
@@ -15,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="48dp"
         android:background="@drawable/rounded_logo_background"
         android:padding="8dp">
 
@@ -29,15 +26,15 @@
     <!-- Illustration with Rounded Corners -->
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/illustration"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
         android:background="@drawable/illustration"
         android:layout_below="@id/logo_container"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         app:strokeWidth="4dp"
         app:strokeColor="@android:color/white"
-        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize15Percent" />
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize15Percent"/>
 
     <!-- CardView for Input Section -->
     <androidx.cardview.widget.CardView
@@ -46,7 +43,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="24dp"
         android:layout_below="@id/illustration"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         app:cardCornerRadius="16dp"
         app:cardElevation="8dp"
         app:cardBackgroundColor="@android:color/white">
@@ -66,8 +63,10 @@
                 android:background="@drawable/rounded_edit_text"
                 android:inputType="textEmailAddress"
                 android:drawableStart="@drawable/ic_email"
-                android:drawablePadding="8dp"
-                android:layout_marginTop="8dp"/>
+                android:drawablePadding="12dp"
+                android:layout_marginTop="8dp"
+                android:textColorHint="#888888"
+                android:textColor="#000000" />
 
             <!-- Password Field with Icon -->
             <EditText
@@ -78,8 +77,10 @@
                 android:background="@drawable/rounded_edit_text"
                 android:inputType="textPassword"
                 android:drawableStart="@drawable/ic_lock"
-                android:drawablePadding="8dp"
-                android:layout_marginTop="16dp"/>
+                android:drawablePadding="12dp"
+                android:layout_marginTop="16dp"
+                android:textColorHint="#888888"
+                android:textColor="#000000" />
 
             <!-- Login Button with Icon -->
             <Button
@@ -88,10 +89,13 @@
                 android:layout_height="48dp"
                 android:text="INGRESAR"
                 android:textColor="@android:color/white"
-                android:background="@drawable/rounded_button"
+                android:textStyle="bold"
+                android:textSize="16sp"
                 android:drawablePadding="8dp"
-                android:layout_marginTop="24dp"/>
-
+                android:background="@drawable/rounded_button"
+                android:layout_marginTop="24dp"
+                android:elevation="6dp"
+                android:padding="8dp"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
@@ -108,18 +112,17 @@
         <!-- Register Link -->
         <TextView
             android:id="@+id/register_link"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="¿No tienes cuenta? Regístrate"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="¿No tienes cuenta? Solicita tu registro"
             android:textColor="@color/white"
-            android:layout_weight="1"
-            android:gravity="start"/>
+            android:layout_weight="1" />
 
         <!-- Forgot Password Link -->
         <TextView
             android:id="@+id/forgot_password_link"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
             android:text="¿Olvidaste tu contraseña?"
             android:textColor="@color/white"
             android:layout_weight="1"

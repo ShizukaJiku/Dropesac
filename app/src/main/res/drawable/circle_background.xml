@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/drawable/circle_background.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#002366"/> <!-- Fondo azul oscuro -->
+    <corners android:radius="24dp"/> <!-- Tamaño del radio para un fondo circular -->
+</shape>
