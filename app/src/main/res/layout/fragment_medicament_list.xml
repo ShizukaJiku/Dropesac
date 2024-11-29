@@ -5,20 +5,6 @@
     android:background="#FFE4E1"
     android:padding="16dp">
 
-    <!-- Botón de Carrito de Compras -->
-    <ImageView
-        android:id="@+id/cart_button"
-        android:layout_width="44dp"
-        android:layout_height="44dp"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="18dp"
-        android:layout_marginEnd="0dp"
-        android:src="@drawable/ic_cart"
-        android:background="@drawable/circle_background"
-        android:padding="8dp"
-        android:elevation="4dp"
-        android:contentDescription="Carrito de compras" />
-
     <!-- Barra de Búsqueda -->
     <LinearLayout
         android:id="@+id/search_bar"
@@ -31,33 +17,35 @@
         android:background="@drawable/search_bar_background"
         android:padding="12dp">
 
-        <ImageView
-            android:id="@+id/search_icon"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:src="@drawable/ic_search"
-            android:contentDescription="Buscar icono" />
-
-        <EditText
-            android:id="@+id/search_input"
-            android:layout_width="264dp"
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:background="@android:color/transparent"
-            android:hint="¿Qué buscaremos hoy?"
-            android:textColorHint="#888888"
-            android:textSize="16sp" />
+            android:hint="Buscador">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/search_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"/>
+        </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 
     <!-- Lista de Productos -->
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/product_list"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/medicament_list"
+        android:name="com.dropesac.app.ui.fragment.MedicamentFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_above="@id/bottom_navigation"
         android:layout_below="@id/search_bar"
-        android:clipToPadding="false"
-        android:paddingBottom="16dp" />
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        app:layoutManager="LinearLayoutManager"
+        tools:context=".ui.fragment.MedicamentListFragment"
+        tools:listitem="@layout/medicament_item" />
 
     <!-- Barra de Navegación Inferior -->
     <LinearLayout
@@ -91,6 +79,7 @@
         </LinearLayout>
 
         <LinearLayout
+            android:id="@+id/cartButton"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -100,13 +89,13 @@
             <ImageView
                 android:layout_width="32dp"
                 android:layout_height="32dp"
-                android:src="@drawable/ic_account"
-                android:contentDescription="Cuenta" />
+                android:src="@drawable/ic_cart"
+                android:contentDescription="Carrito" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Cuenta"
+                android:text="Carrito"
                 android:textColor="#000000"
                 android:textSize="12sp" />
         </LinearLayout>
